@@ -26,7 +26,7 @@ app.get("/api", (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.end(`Hello! Token is: ${1}`);
+  res.end(`Hello! Token is: ${DISCORD_BOT_TOKEN}`);
 });
 
 app.get("/api/item/:slug", (req, res) => {
