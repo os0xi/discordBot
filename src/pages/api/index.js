@@ -3,11 +3,8 @@ const { v4 } = require("uuid");
 const { Client, GatewayIntentBits } = require("discord.js");
 import { Client as NotionClient } from "@notionhq/client";
 
-const DISCORD_CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
-const DISCORD_CLIENT_ID = process.env.DISCORD_CLIENT_ID;
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const notionSecret = process.env.NOTION_SECRET;
-const db = process.env.NOTION_DB_2;
 
 const discordClient = new Client({
   intents: [
