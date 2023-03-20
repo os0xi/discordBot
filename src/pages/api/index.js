@@ -20,7 +20,7 @@ discordClient.on("ready", () => {
 discordClient.on("messageCreate", (message) => {
   console.log(`${message.author.tag} :: ${message.content}`);
 });
-// discordClient.login(DISCORD_BOT_TOKEN);
+discordClient.login(DISCORD_BOT_TOKEN);
 
 app.get("/api", (req, res) => {
   const path = `/api/item/${v4()}`;
