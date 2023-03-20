@@ -1,6 +1,7 @@
 const app = require("express")();
 const { v4 } = require("uuid");
-import { Client, GatewayIntentBits } from "discord.js";
+const { Client, GatewayIntentBits } = require("discord.js");
+
 const DISCORD_CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
 const DISCORD_CLIENT_ID = process.env.DISCORD_CLIENT_ID;
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
@@ -25,7 +26,7 @@ app.get("/api", (req, res) => {
   const path = `/api/item/${v4()}`;
   res.setHeader("Content-Type", "text/html");
   res.setHeader("Cache-Control", "s-max-age=1, stale-while-revalidate");
-  res.end(`Hello! Token is: ${DISCORD_BOT_TOKEN}`);
+  res.end(`Hello! Token is: ${1}`);
 });
 
 app.get("/api/item/:slug", (req, res) => {
